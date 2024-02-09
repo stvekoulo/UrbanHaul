@@ -2,7 +2,6 @@
     preloader
   ============================== -->
   <div class="preloader">
-    <button class="th-btn style3 preloaderCls">Cancel Preloader </button>
     <div class="preloader-inner">
         <div class="loading-window">
             <div class="car">
@@ -30,34 +29,15 @@ Mobile Menu
     <div class="th-menu-area text-center">
         <button class="th-menu-toggle "><i class="fal fa-times"></i></button>
         <div class="mobile-logo">
-            <a href="index.html"><img src="{{asset('urbanhaul/assets/img/logo.svg')}}" alt="Taxiar"></a>
+            <a href="{{route('home')}}"><img src="{{asset('urbanhaul/assets/img/logo.svg')}}" alt="Taxiar"></a>
         </div>
         <div class="th-mobile-menu">
             <ul>
                 <li class="menu-item-has-children">
-                    <a href="index.html">Home</a>
-                    <ul class="sub-menu">
-                        <li><a href="index.html">Home One </a></li>
-                        <li><a href="index-2.html">Home Two </a></li>
-                        <li><a href="index-3.html">Home Three </a></li>
-                    </ul>
+                    <a href="{{route('home')}}">Acceuil</a>
                 </li>
                 <li>
                     <a href="about.html">About Us</a>
-                </li>
-                <li class="menu-item-has-children">
-                    <a href="#">Service</a>
-                    <ul class="sub-menu">
-                        <li><a href="service.html">Service</a></li>
-                        <li><a href="service-details.html">Service Details</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item-has-children">
-                    <a href="#">Blog</a>
-                    <ul class="sub-menu">
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="blog-details.html">Blog Details</a></li>
-                    </ul>
                 </li>
                 <li class="menu-item-has-children">
                     <a href="#">Pages</a>
