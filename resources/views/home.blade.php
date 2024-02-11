@@ -86,8 +86,6 @@ Service Area
                         <h3 class="service-item_title"><a href="service-details.html">Rapid City Transfer</a></h3>
                         <p class="service-item_text">Rapid city transfer is a term used by some taxi or cab services
                             to describe their service of bringing.</p>
-                        <a href="service-details.html" class="line-btn">Learn More<i
-                                class="fa-regular fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -101,8 +99,6 @@ Service Area
                         <h3 class="service-item_title"><a href="service-details.html">Online Booking</a></h3>
                         <p class="service-item_text">Online taxi service is a convenient and affordable way to
                             travel within a city or to nearby destinations.</p>
-                        <a href="service-details.html" class="line-btn">Learn More<i
-                                class="fa-regular fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -116,8 +112,6 @@ Service Area
                         <h3 class="service-item_title"><a href="service-details.html">Airport Transport</a></h3>
                         <p class="service-item_text">It can include different types of vehicles, such as taxis, car
                             hire, airport transfers, airport shuttles, airport buses, etc.</p>
-                        <a href="service-details.html" class="line-btn">Learn More<i
-                                class="fa-regular fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -131,8 +125,6 @@ Service Area
                         <h3 class="service-item_title"><a href="service-details.html">Business Transport</a></h3>
                         <p class="service-item_text">Business transport refers to the transportation services and
                             methods used by businesses to move goods, equipment.</p>
-                        <a href="service-details.html" class="line-btn">Learn More<i
-                                class="fa-regular fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -159,19 +151,13 @@ Team Area
                         <img src="{{asset('urbanhaul/assets/img/team/team_1_1.jpg')}}" alt="Team">
                     </div>
                     <div class="team-item_content">
-                        <h3 class="team-item_title"><a href="team-details.html">Sophia Isabella</a></h3>
+                        <h3 class="team-item_title">Sophia Isabella</h3>
                         <span class="team-item_desig">Expert Driver</span>
                         <div class="th-social team-social">
-                            <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                            <a target="_blank" href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
-                            <a target="_blank" href="https://google.com/"><i
-                                    class="fa-brands fa-linkedin-in"></i></a>
                         </div>
                     </div>
                     <div class="info-item">
-                        <h3 class="team-item_title"><a href="team-details.html">Sophia Isabella</a></h3>
-                        <span class="team-item_desig">Expert Driver</span>
+                        <h3 class="team-item_title">Sophia Isabella</h3>
                     </div>
                 </div>
             </div>
@@ -182,19 +168,13 @@ Team Area
                         <img src="{{asset('urbanhaul/assets/img/team/team_1_2.jpg')}}" alt="Team">
                     </div>
                     <div class="team-item_content">
-                        <h3 class="team-item_title"><a href="team-details.html">Emma Margaret</a></h3>
+                        <h3 class="team-item_title">Emma Margaret</h3>
                         <span class="team-item_desig">Senior Driver</span>
                         <div class="th-social team-social">
-                            <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                            <a target="_blank" href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
-                            <a target="_blank" href="https://google.com/"><i
-                                    class="fa-brands fa-linkedin-in"></i></a>
                         </div>
                     </div>
                     <div class="info-item">
-                        <h3 class="team-item_title"><a href="team-details.html">Emma Margaret</a></h3>
-                        <span class="team-item_desig">Senior Driver</span>
+                        <h3 class="team-item_title">Emma Margaret</h3>
                     </div>
                 </div>
             </div>
@@ -205,19 +185,13 @@ Team Area
                         <img src="{{asset('urbanhaul/assets/img/team/team_1_3.jpg')}}" alt="Team">
                     </div>
                     <div class="team-item_content">
-                        <h3 class="team-item_title"><a href="team-details.html">Jacob Michael</a></h3>
+                        <h3 class="team-item_title">Jacob Michael</h3>
                         <span class="team-item_desig">Junior Driver</span>
                         <div class="th-social team-social">
-                            <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                            <a target="_blank" href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
-                            <a target="_blank" href="https://google.com/"><i
-                                    class="fa-brands fa-linkedin-in"></i></a>
-                        </div>
+                    </div>
                     </div>
                     <div class="info-item">
-                        <h3 class="team-item_title"><a href="team-details.html">Jacob Michael</a></h3>
-                        <span class="team-item_desig">Junior Driver</span>
+                        <h3 class="team-item_title">Jacob Michael</h3>
                     </div>
                 </div>
             </div>
@@ -228,19 +202,13 @@ Team Area
                         <img src="{{asset('urbanhaul/assets/img/team/team_1_4.jpg')}}" alt="Team">
                     </div>
                     <div class="team-item_content">
-                        <h3 class="team-item_title"><a href="team-details.html">Mason Robert</a></h3>
+                        <h3 class="team-item_title">Mason Robert</h3>
                         <span class="team-item_desig">Senior Driver</span>
                         <div class="th-social team-social">
-                            <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                            <a target="_blank" href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
-                            <a target="_blank" href="https://google.com/"><i
-                                    class="fa-brands fa-linkedin-in"></i></a>
                         </div>
                     </div>
                     <div class="info-item">
-                        <h3 class="team-item_title"><a href="team-details.html">Mason Robert</a></h3>
-                        <span class="team-item_desig">Senior Driver</span>
+                        <h3 class="team-item_title">Mason Robert</h3>
                     </div>
                 </div>
             </div>
@@ -333,7 +301,7 @@ Feature Area
                             </div>
                             <div class="counter-card style2">
                                 <div class="counter-card_icon">
-                                    <img src="assets/img/icon/counter_2_3.svg" alt="icon">
+                                    <img src="{{asset('urbanhaul/assets/img/icon/counter_2_3.svg')}}" alt="icon">
                                 </div>
                                 <div class="counter-card_number"><span class="counter-number">65.2</span>k<span
                                         class="text-theme">+</span>

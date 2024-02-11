@@ -29,22 +29,55 @@ Mobile Menu
     <div class="th-menu-area text-center">
         <button class="th-menu-toggle "><i class="fal fa-times"></i></button>
         <div class="mobile-logo">
-            <a href="{{route('home')}}"><img src="{{asset('urbanhaul/assets/img/logo.svg')}}" alt="Taxiar"></a>
+            <a href="{{ route('welcome') }}"><img src="{{asset('urbanhaul/assets/img/logo.svg')}}" alt="Taxiar"></a>
         </div>
         <div class="th-mobile-menu">
             <ul>
                 <li class="menu-item-has-children">
-                    <a href="{{route('home')}}">Acceuil</a>
+                    <a href="{{ route('welcome') }}">Acceuil</a>
                 </li>
                 <li>
                     <a href="about.html">A propos</a>
                 </li>
                 <li>
-                    <a href="contact.html">Contacte</a>
+                    <a href="contact.html">Contact</a>
                 </li>
             </ul>
+            @if (Route::has('login'))
+                @auth
+                <i class="far fa-user">{{ Auth::user()->name}}</i>
+                    <ul>
+                        <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Se déconnecter</a></li>
+                    </ul>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                @else
+                @if (Route::has('register'))
+                <button>
+                    <a href="{{route('register')}}">S'inscrire</a>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      ></path>
+                    </svg>
+                  </button>
+
+                @endif
+                @endauth
+            @endif
         </div>
     </div>
+
 </div>
 
 <!--==============================
@@ -58,58 +91,7 @@ Sidemenu
             <div class="th-widget-about">
                 <p class="footer-text">Centric aplications productize before front end vortals visualize front end
                     is results and value added</p>
-                <h4 class="footer-info-title">WE ARE AVAILABLE</h4>
-                <p class="footer-text">Mon-Sat: 09.00 am to 6.30 pm</p>
                 <a href="contact.html" class="th-btn style3"><span class="btn-text">Contact Us</span></a>
-            </div>
-        </div>
-        <div class="widget footer-widget">
-            <h3 class="widget_title">Recent Posts</h3>
-            <div class="recent-post-wrap">
-                <div class="recent-post">
-                    <div class="media-img">
-                        <a href="blog-details.html"><img src="{{asset('urbanhaul/assets/img/blog/recent-post-1-2.jpg')}}"
-                                alt="Blog Image"></a>
-                    </div>
-                    <div class="media-body">
-                        <div class="recent-post-meta">
-                            <a href="blog.html"><i class="far fa-calendar-days"></i>22th May, 2023</a>
-                        </div>
-                        <h4 class="post-title"><a class="text-inherit" href="blog-details.html">How To Start Car
-                                Engine Faster</a></h4>
-                        <a class="line-btn" href="blog.html">Read More<i class="fa-regular fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="recent-post">
-                    <div class="media-img">
-                        <a href="blog-details.html"><img src="{{asset('urbanhaul/assets/img/blog/recent-post-1-3.jpg')}}"
-                                alt="Blog Image"></a>
-                    </div>
-                    <div class="media-body">
-                        <div class="recent-post-meta">
-                            <a href="blog.html"><i class="far fa-calendar-days"></i>25th May, 2023</a>
-                        </div>
-                        <h4 class="post-title"><a class="text-inherit" href="blog-details.html">How to start car
-                                engine slowly</a></h4>
-                        <a class="line-btn" href="blog.html">Read More<i class="fa-regular fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="widget footer-widget">
-            <h4 class="widget_title">Get Newsletter</h4>
-            <div class="newsletter-widget">
-                <p class="md-20">Sign up today for hints, tips & latest car overview and news</p>
-                <form class="newsletter-form">
-                    <input class="form-control" type="email" placeholder="Email Address" required="">
-                    <button type="submit" class="newsletter-btn"><i class="fas fa-envelope"></i></button>
-                </form>
-                <div class="th-social  style2">
-                    <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                    <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                    <a target="_blank" href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
-                    <a target="_blank" href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                </div>
             </div>
         </div>
     </div>
@@ -126,18 +108,34 @@ Sidemenu
 Header Area
 ==============================-->
 <header class="th-header header-layout7">
-    <div class="header-top">
-        <div class="container">
-            <div class="row justify-content-center justify-content-md-between align-items-center gy-2">
-                <div class="col-auto d-none d-md-block">
-                    <div class="header-links">
-                        <ul>
-                            <li><i class="fa-thin fa-envelope"></i><a
-                                    href="mailto:info@taxiar.com">info@taxiar.com</a>
-                            </li>
-                            <li><i class="fa-thin fa-phone"></i><a href="tel:+468254762443">(+468) 254 762 443</a>
-                            </li>
-                        </ul>
+    <div class="top-area" data-bg-src="{{asset('urbanhaul/assets/img/bg/header_bg_1.png')}}">
+        <div class="header-top">
+            <div class="container">
+                <div class="row justify-content-center justify-content-md-between align-items-center">
+                    <div class="col-auto">
+                        <p class="header-notice">Welcome to Taxiar Online Taxi Services</p>
+                    </div>
+                    <div class="col-auto d-none d-md-block">
+                        @if (Route::has('login'))
+                        <div class="header-links">
+                            <ul>
+                                @auth
+                                <li><i class="far fa-user"></i>{{ Auth::user()->name}}
+                                    <ul>
+                                        <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Se déconnecter</a></li>
+                                    </ul>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </li>
+                                @else
+                                @if (Route::has('register'))
+                                <li><i class="far fa-user"></i><a href="{{route('register')}}">S'inscrire</a></li>
+                                @endif
+                                @endauth
+                            </ul>
+                        </div>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -151,57 +149,17 @@ Header Area
                 <div class="row align-items-center justify-content-between">
                     <div class="col-auto">
                         <div class="header-logo">
-                            <a href="index.html"><img src="{{asset('urbanhaul/assets/img/logo3.svg')}}" alt="Taxiar"></a>
+                            <a href="{{ route('welcome') }}"><img src="{{asset('urbanhaul/assets/img/logo3.svg')}}" alt="Taxiar"></a>
                         </div>
                     </div>
                     <div class="col-auto me-xl-auto">
                         <nav class="main-menu d-none d-lg-block">
                             <ul>
                                 <li class="menu-item-has-children">
-                                    <a href="index.html">Home</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="index.html">Home One </a></li>
-                                        <li><a href="index-2.html">Home Two </a></li>
-                                        <li><a href="index-3.html">Home Three </a></li>
-                                    </ul>
+                                    <a href="{{ route('welcome') }}">Acceuil</a>
                                 </li>
                                 <li>
-                                    <a href="about.html">About Us</a>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">Service</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="service.html">Service</a></li>
-                                        <li><a href="service-details.html">Service Details</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">Blog</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">Pages</a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item-has-children"><a href="#">Shop</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="shop.html">Shop</a></li>
-                                                <li><a href="shop-details.html">Shop Details</a></li>
-                                                <li><a href="cart.html">Cart Page</a></li>
-                                                <li><a href="checkout.html">Checkout</a></li>
-                                                <li><a href="wishlist.html">Wishlist</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="team.html">Driver</a></li>
-                                        <li><a href="team-details.html">Driver Details</a></li>
-                                        <li><a href="taxi.html">Taxi</a></li>
-                                        <li><a href="taxi-details.html">Taxi Details</a></li>
-                                        <li><a href="booking.html">Booking Ride</a></li>
-                                        <li><a href="faq.html">Faq</a></li>
-                                        <li><a href="error.html">Error</a></li>
-                                    </ul>
+                                    <a href="about.html">A propos</a>
                                 </li>
                                 <li>
                                     <a href="contact.html">Contact</a>
@@ -215,11 +173,9 @@ Header Area
                         <div class="header-button">
                             <button type="button" class="icon-btn searchBoxToggler"><i
                                     class="far fa-search"></i></button>
-                            <a href="#" class="icon-btn sideMenuToggler2"><i class="fa-regular fa-bag-shopping"></i>
-                                <span class="badge">5</span></a>
                             <a href="#" class="icon-btn sideMenuToggler"><i class="far fa-bars"></i></a>
 
-                            <a href="booking.html" class="th-btn">BOOK A TAXI<i
+                            <a href="booking.html" class="th-btn">Trouver Un agent<i
                                     class="fa-regular fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -248,8 +204,6 @@ Hero Area
                     convenient and affordable way to travel within a city or to nearby destinations. You can book a
                     cab online through various platforms.</p>
                 <div class="btn-group" data-ani="slideinleft" data-ani-delay="0.5s">
-                    <a href="about.html" class="th-btn style3">Discover More <i
-                            class="fa-regular fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -268,8 +222,6 @@ Hero Area
                     convenient and affordable way to travel within a city or to nearby destinations. You can book a
                     cab online through various platforms.</p>
                 <div class="btn-group" data-ani="slideinleft" data-ani-delay="0.5s">
-                    <a href="about.html" class="th-btn style3">Discover More <i
-                            class="fa-regular fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -289,8 +241,6 @@ Hero Area
                     convenient and affordable way to travel within a city or to nearby destinations. You can book a
                     cab online.</p>
                 <div class="btn-group" data-ani="slideinleft" data-ani-delay="0.5s">
-                    <a href="about.html" class="th-btn style3">Discover More <i
-                            class="fa-regular fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -300,58 +250,6 @@ Hero Area
 <!--==============================
 Booking Area
 ==============================-->
-<div class="booking-section">
-    <div class="container">
-        <form action="mail.php" method="POST" class="booking-form ajax-contact wow fadeInUp">
-            <div class="input-wrap">
-                <div class="row">
-                    <div class="form-group col-xl-3 col-lg-4 col-sm-6">
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
-                        <i class="fa-light fa-user"></i>
-                    </div>
-                    <div class="form-group col-xl-3 col-lg-4 col-sm-6">
-                        <input type="number" class="form-control" name="phone" id="phone"
-                            placeholder="Phone Number">
-                        <i class="fa-light fa-phone-rotary"></i>
-                    </div>
-                    <div class="form-group col-xl-3 col-lg-4 col-sm-6">
-                        <select name="passenger" id="passenger" class="form-select nice-select">
-                            <option value="" disabled selected hidden>passenger</option>
-                            <option value="passenger1">passenger 1</option>
-                            <option value="passenger2">passenger 2</option>
-                            <option value="passenger3">passenger 3</option>
-                            <option value="passenger4">passenger 4</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-xl-3 col-lg-4 col-sm-6">
-                        <input type="text" class="form-control" name="s-destination" id="s-destination"
-                            placeholder="Start Destination">
-                        <i class="fa-sharp fa-regular fa-location-dot"></i>
-                    </div>
-                    <div class="form-group col-xl-3 col-lg-4 col-sm-6">
-                        <input type="text" class="form-control" name="e-destination" id="e-destination"
-                            placeholder="End Destination">
-                        <i class="fa-sharp fa-regular fa-location-dot"></i>
-                    </div>
-                    <div class="form-group col-xl-3 col-lg-4 col-sm-6">
-                        <input type="text" class="date-pick form-control" name="date" id="date-pick"
-                            placeholder="Select Date">
-                        <i class="fa-light fa-calendar-days"></i>
-                    </div>
-                    <div class="form-group col-xl-3 col-lg-4 col-sm-6">
-                        <input type="text" class="time-pick form-control" name="time" id="time-pick"
-                            placeholder="Select Time">
-                        <i class="fa-light fa-clock"></i>
-                    </div>
-                    <div class="form-btn col-xl-3 col-lg-4 col-sm-6">
-                        <button class="th-btn">Book Taxi Now <i class="fa-regular fa-arrow-right"></i></button>
-                    </div>
-                </div>
-                <p class="form-messages mb-0 mt-3"></p>
-            </div>
-        </form>
-    </div>
-</div>
 <!--==============================
 About Area
 ==============================-
