@@ -19,7 +19,13 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
+Route::get('contactus', function () {
+    return view('contactus');
+})->name('contactus');
 
+Route::get('aboutus', function () {
+    return view('aboutus');
+})->name('aboutus');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

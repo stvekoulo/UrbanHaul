@@ -1,14 +1,11 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Taxiar - Online Taxi Service HTML Template - Home 1</title>
-    <meta name="author" content="Taxiar">
-    <meta name="description" content="Taxiar - Online Taxi Service HTML Template">
-    <meta name="keywords" content="Taxiar - Online Taxi Service HTML Template">
-    <meta name="robots" content="INDEX,FOLLOW">
+    <title>{{ config('app.name', 'UrbanHaul') }}</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

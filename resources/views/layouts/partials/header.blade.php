@@ -29,7 +29,7 @@ Mobile Menu
     <div class="th-menu-area text-center">
         <button class="th-menu-toggle "><i class="fal fa-times"></i></button>
         <div class="mobile-logo">
-            <a href="{{ route('welcome') }}"><img src="{{asset('urbanhaul/assets/img/logo.svg')}}" alt="Taxiar"></a>
+            <a href="{{ route('welcome') }}"><img src="{{asset('urbanhaul/assets/img/logo.svg')}}" alt="UrbanHaul"></a>
         </div>
         <div class="th-mobile-menu">
             <ul>
@@ -37,15 +37,15 @@ Mobile Menu
                     <a href="{{ route('welcome') }}">Acceuil</a>
                 </li>
                 <li>
-                    <a href="about.html">A propos</a>
+                    <a href="{{route('aboutus')}}">A propos</a>
                 </li>
                 <li>
-                    <a href="contact.html">Contact</a>
+                    <a href="{{route('contactus')}}">Contact</a>
                 </li>
             </ul>
             @if (Route::has('login'))
                 @auth
-                <i class="far fa-user">{{ Auth::user()->name}}</i>
+                {{ Auth::user()->name}}
                     <ul>
                         <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Se déconnecter</a></li>
                     </ul>
@@ -91,7 +91,7 @@ Sidemenu
             <div class="th-widget-about">
                 <p class="footer-text">Centric aplications productize before front end vortals visualize front end
                     is results and value added</p>
-                <a href="contact.html" class="th-btn style3"><span class="btn-text">Contact Us</span></a>
+                <a href="{{route('contactus')}}" class="th-btn style3"><span class="btn-text">Contactez-nous</span></a>
             </div>
         </div>
     </div>
@@ -149,20 +149,20 @@ Header Area
                 <div class="row align-items-center justify-content-between">
                     <div class="col-auto">
                         <div class="header-logo">
-                            <a href="{{ route('welcome') }}"><img src="{{asset('urbanhaul/assets/img/logo3.svg')}}" alt="Taxiar"></a>
+                            <a href="{{ route('welcome') }}"><img src="{{asset('urbanhaul/assets/img/logo3.svg')}}" alt="UrbanHaul"></a>
                         </div>
                     </div>
                     <div class="col-auto me-xl-auto">
                         <nav class="main-menu d-none d-lg-block">
                             <ul>
-                                <li class="menu-item-has-children">
+                                <li>
                                     <a href="{{ route('welcome') }}">Acceuil</a>
                                 </li>
                                 <li>
-                                    <a href="about.html">A propos</a>
+                                    <a href="{{route('aboutus')}}">A propos</a>
                                 </li>
                                 <li>
-                                    <a href="contact.html">Contact</a>
+                                    <a href="{{route('contactus')}}">Contact</a>
                                 </li>
                             </ul>
                         </nav>
