@@ -87,10 +87,9 @@ Sidemenu
     <div class="sidemenu-content bg-title">
         <button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
         <div class="widget footer-widget">
-            <h3 class="widget_title">About Company</h3>
+            <h3 class="widget_title">À propos de l'entreprise</h3>
             <div class="th-widget-about">
-                <p class="footer-text">Centric aplications productize before front end vortals visualize front end
-                    is results and value added</p>
+                <p class="footer-text">UrbanHaul vous offre une solution de transport fiable et rapide pour vos déplacements en ville, connectant les passagers à une communauté de chauffeurs qualifiés à proximité.</p>
                 <a href="{{route('contactus')}}" class="th-btn style3"><span class="btn-text">Contactez-nous</span></a>
             </div>
         </div>
@@ -113,7 +112,7 @@ Header Area
             <div class="container">
                 <div class="row justify-content-center justify-content-md-between align-items-center">
                     <div class="col-auto">
-                        <p class="header-notice">Welcome to Taxiar Online Taxi Services</p>
+                        <p class="header-notice">Bienvenue chez UrbanHaul Services de Transport en Ligne</p>
                     </div>
                     <div class="col-auto d-none d-md-block">
                         @if (Route::has('login'))
@@ -197,12 +196,10 @@ Hero Area
         </div>
         <div class="container">
             <div class="hero-style7">
-                <span class="hero-subtitle" data-ani="slideinleft" data-ani-delay="0.1s">WELCOME TO TAXIAR</span>
-                <h1 class="hero-title" data-ani="slideinleft" data-ani-delay="0.3s">The Best Way To Get Around Town.
+                <span class="hero-subtitle" data-ani="slideinleft" data-ani-delay="0.1s">BIENVENUE CHEZ URBANHAUL</span>
+                <h1 class="hero-title" data-ani="slideinleft" data-ani-delay="0.3s">Le meilleur moyen de se déplacer en ville.
                 </h1>
-                <p class="hero-text" data-ani="slideinleft" data-ani-delay="0.4s">Online taxi service is a
-                    convenient and affordable way to travel within a city or to nearby destinations. You can book a
-                    cab online through various platforms.</p>
+                <p class="hero-text" data-ani="slideinleft" data-ani-delay="0.4s">UrbanHaul est une solution pratique et abordable pour vos déplacements urbains ou vers des destinations proches, vous permettant de trouver un chauffeur à proximité grâce à notre plateforme.</p>
                 <div class="btn-group" data-ani="slideinleft" data-ani-delay="0.5s">
                 </div>
             </div>
@@ -215,12 +212,9 @@ Hero Area
         </div>
         <div class="container">
             <div class="hero-style7">
-                <span class="hero-subtitle" data-ani="slideinleft" data-ani-delay="0.1s">Taxi Driver for Hire</span>
-                <h1 class="hero-title" data-ani="slideinleft" data-ani-delay="0.3s">Need a Ride? Call us anytime!
-                </h1>
-                <p class="hero-text" data-ani="slideinleft" data-ani-delay="0.4s">Online taxi service is a
-                    convenient and affordable way to travel within a city or to nearby destinations. You can book a
-                    cab online through various platforms.</p>
+                <span class="hero-subtitle" data-ani="slideinleft" data-ani-delay="0.1s">Des Agents a votre service</span>
+                <h1 class="hero-title" data-ani="slideinleft" data-ani-delay="0.3s">Besoin d'une course en urgence ? Vous êtes au bon endroit.</h1>
+                <p class="hero-text" data-ani="slideinleft" data-ani-delay="0.4s">UrbanHaul est une solution pratique et abordable pour vos déplacements urbains ou vers des destinations proches, vous permettant de trouver un chauffeur à proximité grâce à notre plateforme.</p>
                 <div class="btn-group" data-ani="slideinleft" data-ani-delay="0.5s">
                 </div>
             </div>
@@ -233,13 +227,10 @@ Hero Area
         </div>
         <div class="container">
             <div class="hero-style7">
-                <span class="hero-subtitle" data-ani="slideinleft" data-ani-delay="0.1s">24/7 Online Taxi Booking
-                    Service</span>
-                <h1 class="hero-title" data-ani="slideinleft" data-ani-delay="0.3s">A different kind of taxi company
+                <span class="hero-subtitle" data-ani="slideinleft" data-ani-delay="0.1s">Service de Transport en ligne 24/7</span>
+                <h1 class="hero-title" data-ani="slideinleft" data-ani-delay="0.3s">Une compagnie de taxi différente
                 </h1>
-                <p class="hero-text" data-ani="slideinleft" data-ani-delay="0.4s">Online taxi service is a
-                    convenient and affordable way to travel within a city or to nearby destinations. You can book a
-                    cab online.</p>
+                <p class="hero-text" data-ani="slideinleft" data-ani-delay="0.4s">UrbanHaul est une solution pratique et abordable pour vos déplacements urbains ou vers des destinations proches, vous permettant de trouver un chauffeur à proximité grâce à notre plateforme.</p>
                 <div class="btn-group" data-ani="slideinleft" data-ani-delay="0.5s">
                 </div>
             </div>

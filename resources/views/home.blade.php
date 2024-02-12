@@ -16,36 +16,30 @@ About Area
                         <img src="{{asset('urbanhaul/assets/img/normal/about_1_2.jpg')}}" alt="About">
                     </div>
                     <div class="journey-box">
-                        <h3 class="journey-title">Started Journey</h3>
-                        <span class="journey-year">1986</span>
+                        <h3 class="journey-title">Mis en Place </h3>
+                        <span class="journey-year">2024</span>
                     </div>
                 </div>
             </div>
             <div class="col-xl-6">
                 <div class="ps-xxl-5 ms-xl-4 wow fadeInRight">
                     <div class="title-area mb-20">
-                        <span class="sub-title">ABOUT OUR COMPANY</span>
-                        <h2 class="sec-title">Wherever You Need To Go We'll Take You There.</h2>
+                        <span class="sub-title">À PROPOS DE URBANHAUL</span>
+                        <h2 class="sec-title">Où que vous ayez besoin d'aller, nous vous y emmènerons.</h2>
                     </div>
-                    <p class="mb-30">Authoritatively simplify open-source resources via
-                        backend
-                        visualize business e-markets before parallel convergence optimize sticky and idea-sharing
-                        rather
-                        than unique solutions.</p>
+                    <p class="mb-30">Notre plateforme connecte les clients à une communauté de chauffeurs qualifiés, prêts à vous conduire où vous le souhaitez, quand vous le souhaitez. Avec notre système de géolocalisation avancé, vous pouvez facilement trouver les chauffeurs disponibles à proximité, garantissant ainsi des temps d'attente minimes et des trajets rapides.</p>
                     <div class="journey-wrap style2">
                         <div class="journey-image">
                             <img src="{{asset('urbanhaul/assets/img/normal/map.jpg')}}" alt="">
                         </div>
                         <div class="checklist">
                             <ul>
-                                <li>Easy & Emergency Solutions Anytime</li>
-                                <li>Getting Affordable price upto 2 years</li>
-                                <li>More Reliable & Experienced Teams</li>
+                                <li>Fiabilité et Rapidité</li>
+                                <li>Confort et Sécurité</li>
+                                <li>Accessibilité et Commodité </li>
                             </ul>
                         </div>
                     </div>
-                    <a href="about.html" class="th-btn"><span class="btn-text">Discover More<i
-                                class="fa-regular fa-arrow-right ms-2"></i></span></a>
                 </div>
             </div>
         </div>
@@ -59,8 +53,8 @@ Service Area
         <div class="row align-items-center">
             <div class="col-lg-8 col-xl-6">
                 <div class="title-area text-center text-lg-start">
-                    <span class="sub-title">Our Services</span>
-                    <h2 class="sec-title">Best Taxi Services For You</h2>
+                    <span class="sub-title">Nos Services</span>
+                    <h2 class="sec-title">Meilleurs services de Transport pour vous</h2>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -83,9 +77,8 @@ Service Area
                         <img src="{{asset('urbanhaul/assets/img/service/service-6-1.jpg')}}" alt="service image">
                     </div>
                     <div class="service-item_content">
-                        <h3 class="service-item_title"><a href="service-details.html">Rapid City Transfer</a></h3>
-                        <p class="service-item_text">Rapid city transfer is a term used by some taxi or cab services
-                            to describe their service of bringing.</p>
+                        <h3 class="service-item_title"><a href="service-details.html">Rechercher un agent </a></h3>
+                        <p class="service-item_text">Peu importe où vous êtes, nous vous mettons en relation avec les agents les plus proches.</p>
                     </div>
                 </div>
             </div>
@@ -96,9 +89,8 @@ Service Area
                         <img src="{{asset('urbanhaul/assets/img/service/service-6-2.jpg')}}" alt="service image">
                     </div>
                     <div class="service-item_content">
-                        <h3 class="service-item_title"><a href="service-details.html">Online Booking</a></h3>
-                        <p class="service-item_text">Online taxi service is a convenient and affordable way to
-                            travel within a city or to nearby destinations.</p>
+                        <h3 class="service-item_title"><a href="service-details.html">Transferez un colis</a></h3>
+                        <p class="service-item_text">Vous avez besoin de transférer un colis ? Il suffit de nous contacter.</p>
                     </div>
                 </div>
             </div>
@@ -109,22 +101,9 @@ Service Area
                         <img src="{{asset('urbanhaul/assets/img/service/service-6-3.jpg')}}" alt="service image">
                     </div>
                     <div class="service-item_content">
-                        <h3 class="service-item_title"><a href="service-details.html">Airport Transport</a></h3>
-                        <p class="service-item_text">It can include different types of vehicles, such as taxis, car
-                            hire, airport transfers, airport shuttles, airport buses, etc.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 col-xl-3  ">
-                <div class="service-item wow fadeInUp" data-bg-src="{{asset('urbanhaul/assets/img/service/service_shape_1.jpg')}}">
-                    <div class="service-item_img">
-                        <img src="{{asset('urbanhaul/assets/img/service/service-6-4.jpg')}}" alt="service image">
-                    </div>
-                    <div class="service-item_content">
-                        <h3 class="service-item_title"><a href="service-details.html">Business Transport</a></h3>
-                        <p class="service-item_text">Business transport refers to the transportation services and
-                            methods used by businesses to move goods, equipment.</p>
+                        <h3 class="service-item_title"><a href="service-details.html">Devenez un Agent</a></h3>
+                        <p class="service-item_text">Si vous souhaitez contribuer à simplifier le transport pour la population, inscrivez-vous en tant qu'Agent. Le processus est simple et sans frais.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -139,8 +118,7 @@ Team Area
 <section class="space">
     <div class="container">
         <div class="title-area text-center">
-            <span class="sub-title">Team Members<span class="double-line"></span></span>
-            <h2 class="sec-title">Our Expert Drivers</h2>
+            <span class="sub-title">Membres de l'équipe<span class="double-line"></span></span>
         </div>
         <div class="row slider-shadow th-carousel" data-slide-show="4" data-lg-slide-show="3" data-md-slide-show="2"
             data-sm-slide-show="2" data-arrows="true">
@@ -229,26 +207,9 @@ Download Area
         <div class="row">
             <div class="col-xl-6 text-center text-xl-start wow fadeInLeft">
                 <div class="title-area mb-30">
-                    <span class="sub-title">Download Taxiar App Now</span>
-                    <h2 class="sec-title text-capitalize">Get A Free Taxiar App From Online Store</h2>
-                    <p class="sec-text">Competently re-engineer cross-media meta-services whereas best of breed
-                        processes matrix just in time content...</p>
-                </div>
-                <div class="download-btn-wrap style2">
-                    <a target="_blank" href="https://play.google.com/" class="download-btn">
-                        <i class="fa-brands fa-google-play"></i>
-                        <div class="text-group">
-                            <span class="small-text">Download From</span>
-                            <h6 class="big-text">Google Play</h6>
-                        </div>
-                    </a>
-                    <a target="_blank" href="https://www.apple.com/store" class="download-btn style2">
-                        <i class="fa-brands fa-apple"></i>
-                        <div class="text-group">
-                            <span class="small-text">Download From</span>
-                            <h6 class="big-text">App Store</h6>
-                        </div>
-                    </a>
+                    <span class="sub-title">L'application UrbanHaul sera bientôt disponible au téléchargement</span>
+                    <h2 class="sec-title text-capitalize">Sur L'AppStore et le Playstore</h2>
+                    <p class="sec-text">En attendant, installez le site comme une application pour un accès rapide.</p>
                 </div>
             </div>
             <div class="col-xl-6">
