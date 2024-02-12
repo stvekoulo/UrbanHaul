@@ -47,8 +47,11 @@
                                             </h4>
                                         </div>
                                         <div class="col-4 text-end">
-                                            <span class="text-muted">{{ $user->status->updated_at->diffForHumans() }}<i
-                                                    class="mdi mdi-arrow-up text-success"></i></span>
+                                            @if ($user->status)
+                                            <span class="text-muted">{{ $user->status->updated_at->diffForHumans() }}<i class="mdi mdi-arrow-up text-success"></i></span>
+                                        @else
+                                            <span class="text-muted">No status available</span>
+                                        @endif
                                         </div>
                                     </div>
                                 </div>
