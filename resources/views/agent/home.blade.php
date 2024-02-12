@@ -60,18 +60,17 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="mb-4">
-                                        <span class="badge badge-soft-primary float-end">Per Week</span>
-                                        <h5 class="card-title mb-0">Market Revenue</h5>
+                                        <span class="badge badge-soft-primary float-end"></span>
+                                        <h5 class="card-title mb-0">solde</h5>
                                     </div>
                                     <div class="row d-flex align-items-center mb-4">
                                         <div class="col-8">
                                             <h2 class="d-flex align-items-center mb-0">
-                                                $1875.54
+                                        
                                             </h2>
                                         </div>
                                         <div class="col-4 text-end">
-                                            <span class="text-muted">18.71% <i
-                                                    class="mdi mdi-arrow-down text-danger"></i></span>
+                                            
                                         </div>
                                     </div>
 
