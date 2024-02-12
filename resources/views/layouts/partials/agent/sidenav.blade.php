@@ -25,6 +25,12 @@
                     <span class="menu-icon"><i class="bx bx-home-smile"></i></span>
                     <span class="menu-text"> Mon Tableau de bord </span>
                 </a>
+            <li class="menu-item">
+                <a href="{{route('agent.status')}}" class="menu-link waves-effect waves-light">
+                    <span class="menu-icon"><i class="bx bx-user-check"></i></span>
+                    <span class="menu-text"> Mon Statut </span>
+                </a>
+            </li>
             </li>
         </ul>
     </div>

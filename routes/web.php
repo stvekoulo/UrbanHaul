@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AgentController;
 use App\Http\Controllers\ProfileController;
 
 /*
@@ -27,7 +28,9 @@ Route::get('aboutus', function () {
     return view('aboutus');
 })->name('aboutus');
 
-Route::get('/agent/home', [App\Http\Controllers\AgentController::class, 'home'])->middleware(['auth', 'verified'])->name('agent.home');
+Route::get('/agent/home', [AgentController::class, 'home'])->middleware(['auth', 'verified'])->name('agent.home');
+Route::get('/agent/status', [AgentController::class, 'status'])->middleware(['auth', 'verified'])->name('agent.status');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -10,4 +10,9 @@ class AgentController extends Controller
     {
         return view('agent.home');
     }
+
+    public function status()
+    {
+        return view('agent.status');
+    }
 }
