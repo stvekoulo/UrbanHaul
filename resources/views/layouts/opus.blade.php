@@ -9,6 +9,9 @@
 
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#6777ef"/>
+    <link rel="apple-touch-icon" href="{{ asset('logo.PNG') }}">
+    <link rel="manifest" href="{{ asset('/manifest.json') }}">
 
     <!-- Favicons - Place favicon.ico in the root directory -->
     <link rel="apple-touch-icon" sizes="57x57" href="{{asset('urbanhaul/assets/img/favicons/apple-icon-57x57.png')}}">
@@ -164,6 +167,15 @@ button svg {
     <script src="{{asset('urbanhaul/assets/js/wow.min.js')}}"></script>
     <!-- Main Js File -->
     <script src="{{asset('urbanhaul/assets/js/main.js')}}"></script>
+
+    <script src="{{ asset('/sw.js') }}"></script>
+    <script>
+        if (!navigator.serviceWorker.controller) {
+            navigator.serviceWorker.register("/sw.js").then(function (reg) {
+                console.log("Service worker has been registered for scope: " + reg.scope);
+            });
+        }
+    </script>
 
 </body>
 
