@@ -236,8 +236,8 @@ Feature Area
             <div class="col-xl-7">
                 <div class="ps-xxl-5 ms-xl-5 wow fadeInRight">
                     <div class="title-area text-center text-xl-start">
-                        <span class="sub-title">Why Choose Us</span>
-                        <h2 class="sec-title text-white">We Ensure Your Happy To Taxi Journey</h2>
+                        <span class="sub-title">Pourquoi nous choisir</span>
+                        <h2 class="sec-title text-white">Optez pour UrbanHaul pour des trajets en ville simples, sûrs et efficaces.</h2>
                     </div>
                     <div class="counter-wrap style2">
                         <div class="counter-line"></div>
@@ -289,8 +289,8 @@ Testimonial Area
         <div class="row justify-content-center justify-content-lg-between align-items-center">
             <div class="col-lg-8">
                 <div class="title-area text-center text-lg-start">
-                    <span class="sub-title">Client’s Testimonial</span>
-                    <h2 class="sec-title">Our Happy Client’s Review</h2>
+                    <span class="sub-title">Témoignage des clients</span>
+                    <h2 class="sec-title">L'avis de nos clients heureux</h2>
                 </div>
             </div>
             <div class="col-auto">
@@ -306,56 +306,6 @@ Testimonial Area
         </div>
         <div class="row slider-shadow th-carousel" id="testiSlide" data-slide-show="3" data-lg-slide-show="2"
             data-md-slide-show="2">
-            <div class="col-md-6 col-xl-4">
-                <div class="testi-item  wow fadeInUp">
-                    <p class="testi-item_text">“Groactively synthesize schemas before foster like leveraged
-                        expertise user friendly business source iterate.”</p>
-                    <div class="testi-item_wrapper">
-                        <div class="testi-item_profile">
-                            <div class="testi-item_img">
-                                <img src="{{asset('urbanhaul/assets/img/testimonial/testi_3_2.jpg')}}" alt="Avater">
-                            </div>
-                            <div class="media-body">
-                                <h3 class="testi-item_name">Emily Isabella</h3>
-                                <p class="testi-item_desig">Bank Manager</p>
-                            </div>
-                        </div>
-                        <div class="testi-item_quote"><img src="{{asset('urbanhaul/assets/img/icon/quote_2.svg')}}" alt="quote"></div>
-                    </div>
-                    <div class="testi-item_review">
-                        <i class="fa-solid fa-star-sharp"></i>
-                        <i class="fa-solid fa-star-sharp"></i>
-                        <i class="fa-solid fa-star-sharp"></i>
-                        <i class="fa-solid fa-star-sharp"></i>
-                        <i class="fa-solid fa-star-sharp"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-xl-4">
-                <div class="testi-item  wow fadeInUp">
-                    <p class="testi-item_text">“Troactively synthesize schemas before foster like leveraged
-                        expertise user friendly business low before open.”</p>
-                    <div class="testi-item_wrapper">
-                        <div class="testi-item_profile">
-                            <div class="testi-item_img">
-                                <img src="{{asset('urbanhaul/assets/img/testimonial/testi_3_3.jpg')}}" alt="Avater">
-                            </div>
-                            <div class="media-body">
-                                <h3 class="testi-item_name">Harry Callum</h3>
-                                <p class="testi-item_desig">CEO Founder</p>
-                            </div>
-                        </div>
-                        <div class="testi-item_quote"><img src="{{asset('urbanhaul/assets/img/icon/quote_2.svg')}}" alt="quote"></div>
-                    </div>
-                    <div class="testi-item_review">
-                        <i class="fa-solid fa-star-sharp"></i>
-                        <i class="fa-solid fa-star-sharp"></i>
-                        <i class="fa-solid fa-star-sharp"></i>
-                        <i class="fa-solid fa-star-sharp"></i>
-                        <i class="fa-solid fa-star-sharp"></i>
-                    </div>
-                </div>
-            </div>
             <div class="col-md-6 col-xl-4">
                 <div class="testi-item  wow fadeInUp">
                     <p class="testi-item_text">“Jroactively synthesize schemas before foster like leveraged
