@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AgentController;
+use App\Http\Controllers\StatusController;
 use App\Http\Controllers\ProfileController;
 
 /*
@@ -29,7 +30,9 @@ Route::get('aboutus', function () {
 })->name('aboutus');
 
 Route::get('/agent/home', [AgentController::class, 'home'])->middleware(['auth', 'verified'])->name('agent.home');
-Route::get('/agent/status', [AgentController::class, 'status'])->middleware(['auth', 'verified'])->name('agent.status');
+Route::get('/agent/status', [AgentController::class, 'status'])->name('agent.status');
+Route::post('/agent/status/update', [StatusController::class, 'update'])->name('status.update');
+
 
 
 Route::get('/dashboard', function () {

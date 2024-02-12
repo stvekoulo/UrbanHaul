@@ -37,7 +37,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="mb-4">
-                                        <span class="badge badge-soft-primary float-end">Disponible</span>
+                                        <span class="badge badge-soft-primary float-end">{{ $statusText }}</span>
                                         <h5 class="card-title mb-0">Statut</h5>
                                     </div>
                                     <div class="row d-flex align-items-center mb-4">
@@ -47,7 +47,7 @@
                                             </h4>
                                         </div>
                                         <div class="col-4 text-end">
-                                            <span class="text-muted">Depuis 5 min<i
+                                            <span class="text-muted">{{ $user->status->updated_at->diffForHumans() }}<i
                                                     class="mdi mdi-arrow-up text-success"></i></span>
                                         </div>
                                     </div>
@@ -66,11 +66,11 @@
                                     <div class="row d-flex align-items-center mb-4">
                                         <div class="col-8">
                                             <h2 class="d-flex align-items-center mb-0">
-                                        
+
                                             </h2>
                                         </div>
                                         <div class="col-4 text-end">
-                                            
+
                                         </div>
                                     </div>
 

@@ -167,6 +167,7 @@
             </li>
 
             <li class="dropdown">
+                @if(Auth::check())
                 <a class="nav-link dropdown-toggle nav-user me-0 waves-effect waves-light" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                     <img src="{{asset('admin/assets/images/users/avatar-4.jpg')}}" alt="user-image" class="rounded-circle">
                     <span class="ms-1 d-none d-md-inline-block">
@@ -174,6 +175,9 @@
                     {{ Auth::user()->name }}
                     </span>
                 </a>
+                @else
+                    <script>window.location.href = "{{ route('welcome') }}";</script>
+                @endif
                 <div class="dropdown-menu dropdown-menu-end profile-dropdown ">
                     <!-- item-->
                     <div class="dropdown-header noti-title">
