@@ -27,6 +27,8 @@ Route::get('aboutus', function () {
     return view('aboutus');
 })->name('aboutus');
 
+Route::get('/agent/home', [App\Http\Controllers\AgentController::class, 'home'])->middleware(['auth', 'verified'])->name('agent.home');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

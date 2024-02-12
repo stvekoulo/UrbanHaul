@@ -34,7 +34,7 @@ class AuthenticatedSessionController extends Controller
         if ($user->role === 'expediteur') {
             return redirect()->route('welcome');
         } elseif ($user->role === 'agent') {
-            return redirect()->route('dashboard');
+            return redirect()->route('agent.home');
         }
     }
 
