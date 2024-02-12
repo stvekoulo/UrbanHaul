@@ -193,7 +193,7 @@
 @include('layouts.partials.agent.footer-scripts')
 
 <!-- Validation Demo js-->
-<script src="{{asset('admin/assets/js/pages/form-validation.js')}}"></script>
+<script src="assets/js/pages/form-validation.js"></script>
 
 </body>
 </html>
