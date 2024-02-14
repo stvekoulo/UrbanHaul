@@ -35,6 +35,7 @@ Route::get('searchagent', [SearchController::class, 'index'])->name('searchagent
 Route::get('/agent/home', [AgentController::class, 'home'])->middleware(['auth', 'verified'])->name('agent.home');
 Route::get('/agent/status', [AgentController::class, 'status'])->name('agent.status');
 Route::post('/agent/status/update', [StatusController::class, 'update'])->name('status.update');
+Route::post('/status/toggle', [AgentController::class, 'toggleStatus'])->name('status.toggle');
 Route::get('/agent/profil', [ProfilAgentController::class, 'edit'])->name('profil.edit');
 Route::post('/agent/profil', [ProfilAgentController::class, 'update'])->name('profil.update');
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\UserStatus;
+use Illuminate\Http\JsonResponse;
 
 class AgentController extends Controller
 {
@@ -47,5 +48,12 @@ class AgentController extends Controller
                 $statusText = 'Statut inconnu';
         }
         return view('agent.status')->with('statusText', $statusText)->with('user', $user);
+    }
+
+    public function toggleStatus(Request $request): JsonResponse
+    {
+        $user = auth()->user();
+        $user->status()->updateOrCreate([], ['status' => $user->status->status === 'available' ? 'not_available' : 'available']);
+        return response()->json(['message' => 'Statut mis à jour avec succès']);
     }
 }

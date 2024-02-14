@@ -26,13 +26,17 @@
 
         <ul class="topbar-menu d-flex align-items-center gap-4">
 
+            @if(Request::is('agent/home'))
+            <li class="d-none d-md-inline-block">
+                <button id="changeStatusBtn" class="btn btn-primary">Changer de statut</button>
+            </li>
+            @endif
+
             <li class="d-none d-md-inline-block">
                 <a class="nav-link" href="" data-bs-toggle="fullscreen">
                     <i class="mdi mdi-fullscreen font-size-24"></i>
                 </a>
             </li>
-
-           
 
             <li class="nav-link" id="theme-mode">
                 <i class="bx bx-moon font-size-24"></i>
