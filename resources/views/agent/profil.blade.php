@@ -32,6 +32,11 @@
                    <div class="row">
                 <div>
                     <div class="card">
+                        @if(session('warning'))
+                                <div class="alert alert-warning" role="alert">
+                                    {{ session('warning') }}
+                                </div>
+                            @endif
                         <div class="card-body">
                             @if(session('success'))
                                 <div class="alert alert-success">

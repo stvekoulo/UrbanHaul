@@ -28,7 +28,10 @@
 
             @if(Request::is('agent/home'))
             <li class="d-none d-md-inline-block">
-                <button id="changeStatusBtn" class="btn btn-primary">Changer de statut</button>
+                <form id="toggleStatusForm" action="{{ route('status.toggle') }}" method="POST">
+                    @csrf
+                    <button type="submit" id="changeStatusBtn" class="btn btn-primary">Changer de statut</button>
+                </form>
             </li>
             @endif
 
