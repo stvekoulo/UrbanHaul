@@ -46,6 +46,6 @@ class AgentController extends Controller
             default:
                 $statusText = 'Statut inconnu';
         }
-        return view('agent.status')->with('statusText', $statusText);
+        return view('agent.status')->with('statusText', $statusText)->with('user', $user);
     }
 }

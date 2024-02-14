@@ -14,6 +14,7 @@ use Illuminate\Validation\Rules;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use GuzzleHttp\Client;
 
 class RegisteredUserController extends Controller
 {
@@ -34,17 +35,53 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            'role' => ['required', Rule::in(['expediteur', 'agent'])], // Ajout de la validation pour le champ "role"
+            'role' => ['required', Rule::in(['expediteur', 'agent'])],
         ]);
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            'role' => $request->role, // Récupération de la valeur du champ "role"
+        $ip = $request->ip();
+
+        $client = new \GuzzleHttp\Client();
+        $response = $client->request('GET', 'https://maps.googleapis.com/maps/api/geocode/json', [
+            'query' => [
+                'key' => 'AIzaSyDBD9JktcIBCSvwKXOUJYlRRDvqvvUA3no',
+                'address' => $ip,
+            ]
         ]);
+
+
+        $body = $response->getBody();
+        $data = json_decode($body, true);
+
+        if (isset($data['results']) && !empty($data['results'])) {
+
+            $latitude = $data['results'][0]['geometry']['location']['lat'];
+            $longitude = $data['results'][0]['geometry']['location']['lng'];
+
+            $user = User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+                'role' => $request->role,
+                'latitude' => $latitude,
+                'longitude' => $longitude,
+            ]);
+        } else {
+
+            $latitude = 0;
+            $longitude = 0;
+
+            $user = User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+                'role' => $request->role,
+                'latitude' => $latitude,
+                'longitude' => $longitude,
+            ]);
+        }
+
 
         event(new Registered($user));
 

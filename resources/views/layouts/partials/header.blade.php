@@ -170,12 +170,16 @@ Header Area
                     </div>
                     <div class="col-auto d-none d-xl-block">
                         <div class="header-button">
+                            @auth
                             <button type="button" class="icon-btn searchBoxToggler"><i
-                                    class="far fa-search"></i></button>
+                                class="far fa-search"></i></button>
+                            @endauth
                             <a href="#" class="icon-btn sideMenuToggler"><i class="far fa-bars"></i></a>
 
-                            <a href="booking.html" class="th-btn">Trouver Un agent<i
+                            @auth
+                            <a href="{{route('searchagent')}}" class="th-btn">Trouver Un agent<i
                                     class="fa-regular fa-arrow-right ms-2"></i></a>
+                            @endauth
                         </div>
                     </div>
                 </div>
