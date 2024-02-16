@@ -45,7 +45,7 @@
                     <i class="mdi mdi-bell font-size-24"></i>
                     <span class="badge bg-danger rounded-circle noti-icon-badge"></span>
                 </a>
-                
+
 
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg py-0">
                     <div class="p-2 border-top-0 border-start-0 border-end-0 border-dashed border">
@@ -59,7 +59,7 @@
                         </div>
                     </div>
 
-                    
+
 
                     <!-- All-->
                     <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item border-top border-light py-2">
