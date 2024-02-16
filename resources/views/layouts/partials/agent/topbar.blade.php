@@ -40,7 +40,6 @@
                     <i class="mdi mdi-fullscreen font-size-24"></i>
                 </a>
             </li>
-
             <li class="nav-link" id="theme-mode">
                 <i class="bx bx-moon font-size-24"></i>
             </li>
@@ -68,7 +67,7 @@
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item">
                         <i class="fe-user"></i>
-                        <span>My Compte</span>
+                        <span>Mon Compte</span>
                     </a>
 
                     <div class="dropdown-divider"></div>
@@ -76,7 +75,7 @@
                     <!-- item-->
                     <a href="#" class="dropdown-item notify-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         <i class="fe-log-out"></i>
-                        <span>Logout</span>
+                        <span>Déconnexion</span>
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
@@ -88,4 +87,8 @@
         </ul>
     </div>
 </div>
+
+<script src="{{ asset('js/app.js') }}"></script>
+
+
 <!-- ========== Topbar End ========== -->
