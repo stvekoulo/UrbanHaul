@@ -1,1 +1,1 @@
-@include('agent.home')
+@extends('agent.home')
