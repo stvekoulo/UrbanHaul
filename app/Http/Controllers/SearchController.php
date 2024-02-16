@@ -7,7 +7,7 @@ use App\Models\User;
 use App\Models\UserStatus;
 use Illuminate\Support\Facades\DB;
 
-class HomeController extends Controller
+class SearchController extends Controller
 {
     public function index()
     {
@@ -15,7 +15,6 @@ class HomeController extends Controller
                     ->leftJoin('user_statuses', 'users.id', '=', 'user_statuses.user_id')
                     ->select('users.*', 'user_statuses.status')
                     ->get();
-
-        return view('home', compact('agents'));
+        return view('searchagent', compact('agents'));
     }
 }

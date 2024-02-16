@@ -26,12 +26,20 @@
 
         <ul class="topbar-menu d-flex align-items-center gap-4">
 
+            @if(Request::is('agent/home'))
+            <li class="d-none d-md-inline-block">
+                <form id="toggleStatusForm" action="{{ route('status.toggle') }}" method="POST">
+                    @csrf
+                    <button type="submit" id="changeStatusBtn" class="btn btn-primary">Changer de statut</button>
+                </form>
+            </li>
+            @endif
+
             <li class="d-none d-md-inline-block">
                 <a class="nav-link" href="" data-bs-toggle="fullscreen">
                     <i class="mdi mdi-fullscreen font-size-24"></i>
                 </a>
             </li>
-
             <li class="dropdown notification-list">
                 <a class="nav-link dropdown-toggle waves-effect waves-light arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                     <i class="mdi mdi-bell font-size-24"></i>
@@ -60,7 +68,6 @@
 
                 </div>
             </li>
-
             <li class="nav-link" id="theme-mode">
                 <i class="bx bx-moon font-size-24"></i>
             </li>
@@ -68,7 +75,9 @@
             <li class="dropdown">
                 @if(Auth::check())
                 <a class="nav-link dropdown-toggle nav-user me-0 waves-effect waves-light" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                    <img src="{{asset('admin/assets/images/users/avatar-4.jpg')}}" alt="user-image" class="rounded-circle">
+                    @if($user->photo)
+                        <img src="{{ asset('storage/' . $user->photo) }}" alt="user-image" class="rounded-circle">
+                    @endif
                     <span class="ms-1 d-none d-md-inline-block">
                          <i class="mdi mdi-chevron-down"></i>
                     {{ Auth::user()->name }}

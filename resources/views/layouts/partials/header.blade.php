@@ -45,7 +45,7 @@ Mobile Menu
             </ul>
             @if (Route::has('login'))
                 @auth
-                {{ Auth::user()->name}}
+                    {{ Auth::user()->name }}
                     <ul>
                         <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Se déconnecter</a></li>
                     </ul>
@@ -53,28 +53,45 @@ Mobile Menu
                         @csrf
                     </form>
                 @else
-                @if (Route::has('register'))
-                <button>
-                    <a href="{{route('register')}}">S'inscrire</a>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="4"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M14 5l7 7m0 0l-7 7m7-7H3"
-                      ></path>
-                    </svg>
-                  </button>
-
-                @endif
+                    <button>
+                        <a href="{{ route('login') }}">Se connecter</a>
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="4"
+                        >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        ></path>
+                        </svg>
+                    </button>
+                    @if (Route::has('register'))
+                        <button>
+                            <a href="{{ route('register') }}">S'inscrire</a>
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-6 w-6"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="4"
+                            >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            ></path>
+                            </svg>
+                        </button>
+                    @endif
                 @endauth
             @endif
+
         </div>
     </div>
 
@@ -119,22 +136,23 @@ Header Area
                         <div class="header-links">
                             <ul>
                                 @auth
-                                <li><i class="far fa-user"></i>{{ Auth::user()->name}}
-                                    <ul>
-                                        <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Se déconnecter</a></li>
-                                    </ul>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </li>
+                                    <li><i class="far fa-user"></i>{{ Auth::user()->name}}
+                                        <ul>
+                                            <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Se déconnecter</a></li>
+                                        </ul>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </li>
                                 @else
-                                @if (Route::has('register'))
-                                <li><i class="far fa-user"></i><a href="{{route('register')}}">S'inscrire</a></li>
-                                @endif
+                                    <li><i class="far fa-user"></i><a href="{{route('login')}}">Se connecter</a></li>
+                                    @if (Route::has('register'))
+                                        <li><i class="far fa-user"></i><a href="{{route('register')}}">S'inscrire</a></li>
+                                    @endif
                                 @endauth
                             </ul>
                         </div>
-                        @endif
+                    @endif
                     </div>
                 </div>
             </div>
@@ -170,12 +188,16 @@ Header Area
                     </div>
                     <div class="col-auto d-none d-xl-block">
                         <div class="header-button">
+                            @auth
                             <button type="button" class="icon-btn searchBoxToggler"><i
-                                    class="far fa-search"></i></button>
+                                class="far fa-search"></i></button>
+                            @endauth
                             <a href="#" class="icon-btn sideMenuToggler"><i class="far fa-bars"></i></a>
 
-                            <a href="booking.html" class="th-btn">Trouver Un agent<i
+                            @auth
+                            <a href="{{route('searchagent')}}" class="th-btn">Trouver Un agent<i
                                     class="fa-regular fa-arrow-right ms-2"></i></a>
+                            @endauth
                         </div>
                     </div>
                 </div>

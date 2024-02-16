@@ -31,6 +31,12 @@
                     <span class="menu-text"> Mon Statut </span>
                 </a>
             </li>
+            <li class="menu-item">
+                <a href="{{route('profil.edit')}}" class="menu-link waves-effect waves-light">
+                    <span class="menu-icon"><i class="bx bx-user-circle"></i></span>
+                    <span class="menu-text"> Mon Profile </span>
+                </a>
+            </li>
             </li>
         </ul>
     </div>

@@ -23,7 +23,13 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'role', // Ajoutez le champ 'role' ici
+        'role',
+        'latitude',
+        'longitude',
+        'phone_number',
+        'whatsapp_link',
+        'national_id',
+        'photo'
     ];
 
     /**
