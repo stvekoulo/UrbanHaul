@@ -4,7 +4,7 @@
 
 <script>
     document.getElementById('changeStatusBtn').addEventListener('click', function() {
-
+        // Envoyer une requête AJAX au serveur pour changer le statut
         fetch('{{ route("status.toggle") }}', {
             method: 'POST',
             headers: {
@@ -19,14 +19,15 @@
             return response.json();
         })
         .then(data => {
-
-            location.reload();
+            // Mettre à jour le texte du bouton ou effectuer d'autres actions si nécessaire
+            console.log(data.message); // Afficher un message de succès ou de débogage
         })
         .catch(error => {
             console.error('Erreur:', error);
         });
     });
 </script>
+
 
 
 

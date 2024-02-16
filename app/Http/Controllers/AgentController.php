@@ -65,8 +65,7 @@ class AgentController extends Controller
         // Changer le statut de l'utilisateur
         $user->status()->updateOrCreate([], ['status' => $user->status->status === 'available' ? 'not_available' : 'available']);
 
-        // Retourner une réponse JSON avec un message de succès
-        return response()->json(['success' => 'Statut mis à jour avec succès']);
+        return redirect()->back();
     }
 
     private function profilIsComplete($user)
