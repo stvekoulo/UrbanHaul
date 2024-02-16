@@ -3,10 +3,12 @@
 namespace App\Models;
 
 use App\Models\UserStatus;
+use Illuminate\Notifications\Notification;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 
 class User extends Authenticatable
 {
@@ -47,5 +49,9 @@ class User extends Authenticatable
     public function status()
     {
         return $this->hasOne(UserStatus::class);
+    }
+    public function notifications()
+    {
+        return $this->hasMany(Notification::class);
     }
 }

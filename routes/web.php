@@ -33,6 +33,7 @@ Route::get('/agent/home', [AgentController::class, 'home'])->middleware(['auth',
 Route::get('/agent/status', [AgentController::class, 'status'])->name('agent.status');
 Route::post('/agent/status/update', [StatusController::class, 'update'])->name('status.update');
 
+Route::delete('/supprimer-notification/{id}', 'NotificationController@supprimerNotification')->name('notifications.supprimer');
 
 
 Route::get('/dashboard', function () {
