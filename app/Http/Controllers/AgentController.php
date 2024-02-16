@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\UserStatus;
+use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Redirect;
 
@@ -53,24 +54,28 @@ class AgentController extends Controller
 
     public function toggleStatus(Request $request)
     {
-        // Récupérer l'utilisateur connecté
         $user = auth()->user();
 
-        // Vérifier si les informations du profil sont complètes
         if (!$this->profilIsComplete($user)) {
-            // Rediriger l'utilisateur vers la page de complétion du profil
             return redirect()->route('profil.edit')->with('warning', 'Veuillez compléter vos informations de profil avant de changer votre statut.');
         }
 
-        // Changer le statut de l'utilisateur
-        $user->status()->updateOrCreate([], ['status' => $user->status->status === 'available' ? 'not_available' : 'available']);
+        if ($user->status) {
+            // Mettre à jour le statut de l'utilisateur
+            $newStatus = $user->status->status === 'available' ? 'not_available' : 'available';
+            $user->status->update(['status' => $newStatus]);
+        } else {
+            // Créer un nouveau statut pour l'utilisateur
+            $user->status()->create(['status' => 'available']);
+        }
 
-        return redirect()->back();
+        // Rediriger l'utilisateur
+        return redirect()->back()->with('success', 'Statut mis à jour avec succès');
+
     }
 
     private function profilIsComplete($user)
     {
-        // Vérifier si toutes les informations du profil sont remplies
         return !empty($user->phone_number) && !empty($user->whatsapp_link) && !empty($user->national_id) && !empty($user->photo);
     }
 }
