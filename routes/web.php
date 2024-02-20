@@ -7,6 +7,7 @@ use App\Http\Controllers\SearchController;
 use App\Http\Controllers\StatusController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProfilAgentController;
+use App\Http\Controllers\ServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,7 +40,12 @@ Route::post('/status/toggle', [AgentController::class, 'toggleStatus'])->name('s
 Route::get('/agent/profil', [ProfilAgentController::class, 'edit'])->name('profil.edit');
 Route::post('/agent/profil', [ProfilAgentController::class, 'update'])->name('profil.update');
 
-Route::delete('/supprimer-notification/{id}', 'NotificationController@supprimerNotification')->name('notifications.supprimer');
+// routes/web.php
+
+
+
+Route::get('/point-recette', [ServiceController::class, 'afficherPointRecette']);
+Route::post('/calculer-point-recette', [ServiceController::class, 'calculerPointRecette'])->name('calculer-point-recette');
 
 
 Route::get('/dashboard', function () {

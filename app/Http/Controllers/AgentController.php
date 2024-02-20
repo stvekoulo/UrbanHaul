@@ -7,6 +7,8 @@ use App\Models\UserStatus;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Redirect;
 
+
+
 class AgentController extends Controller
 {
     public function home()
@@ -74,4 +76,16 @@ class AgentController extends Controller
         // Vérifier si toutes les informations du profil sont remplies
         return !empty($user->phone_number) && !empty($user->whatsapp_link) && !empty($user->national_id) && !empty($user->photo);
     }
+
+
+
+
+ 
+
+
+
+    
+   
 }
+    
+   
