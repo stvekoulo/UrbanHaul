@@ -49,7 +49,7 @@ class RegisteredUserController extends Controller
                 'key' => 'AIzaSyDBD9JktcIBCSvwKXOUJYlRRDvqvvUA3no',
                 'address' => $ip,
             ],
-            'verify' => false,
+             'verify' => false,
         ]);
 
 
