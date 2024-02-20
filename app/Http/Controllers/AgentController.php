@@ -8,6 +8,8 @@ use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Redirect;
 
+
+
 class AgentController extends Controller
 {
     public function home()
@@ -78,4 +80,16 @@ class AgentController extends Controller
     {
         return !empty($user->phone_number) && !empty($user->whatsapp_link) && !empty($user->national_id) && !empty($user->photo);
     }
+
+
+
+
+ 
+
+
+
+    
+   
 }
+    
+   

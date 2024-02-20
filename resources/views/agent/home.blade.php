@@ -32,7 +32,7 @@
                    @include('layouts.partials.agent.page-title', ['subtitle' => 'Dashtrap', 'title' => 'Dashboard'])
 
 
-                    <div class="row">
+                    
                         <div class="col-md-6 col-xl-3">
                             <div class="card">
                                 <div class="card-body">
@@ -57,84 +57,51 @@
                                 </div>
                                 <!--end card body-->
                             </div><!-- end card-->
-                        </div> <!-- end col-->
+                        </div> <br><br>
 
-                        <div class="col-md-6 col-xl-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="mb-4">
-                                        <span class="badge badge-soft-primary float-end">Jour</span>
-                                        <h3 class="card-title mb-0">solde</h3>
-                                    </div>
-                                    <div class="row d-flex align-items-center mb-4">
-                                        <div class="col-8">
-                                            <h2 class="d-flex align-items-center mb-0">
 
-                                            </h2>
-                                        </div>
-                                        <div class="col-4 text-end">
 
-                                        </div>
-                                    </div>
+                    <div>
 
-                                    
-                                </div>
-                                <!--end card body-->
-                            </div><!-- end card-->
-                        </div> <!-- end col-->
 
-                        <div class="col-md-6 col-xl-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="mb-4">
-                                        <span class="badge badge-soft-primary float-end">Mois</span>
-                                        <h3 class="card-title mb-0">solde</h3>
-                                    </div>
-                                    <div class="row d-flex align-items-center mb-4">
-                                        
-                                        
-                                    </div>
+<h1>Point de recette</h1><br>
+<button type="submit">Calculer le point journalier</button><br><br>
 
-                                    
-                                </div>
-                                <!--end card body-->
-                            </div>
-                            <!--end card-->
-                        </div> <!-- end col-->
 
-                        <div class="col-md-6 col-xl-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="mb-4">
-                                        <span class="badge badge-soft-primary float-end">Année</span>
-                                        <h3 class="card-title mb-0">solde</h3>
-                                    </div>
-                                    <div class="row d-flex align-items-center mb-4">
-                                        
-                                        
-                                    </div>
+<form action="{{ route('calculer-point-recette') }}" method="post">
+    @csrf
+    <label for="start_date">Date de début :</label>
+    <input type="date" name="start_date" required><br><br>
 
-                                    
-                                </div>
-                                <!--end card body-->
-                            </div><!-- end card-->
-                        </div> <!-- end col-->
-                    </div>
-                    <!-- end row-->
+    <label for="end_date">Date de fin :</label>
+    <input type="date" name="end_date" required><br>
 
-                </div> <!-- container -->
+</form>
+<table border="4">
+    <thead>
+        <tr>
+            <th>Montant</th>
+            <th>Service</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="height: 100px; width: 200px;"></td>
+            <td style="height: 100px; width: 200px;">Service non spécifié</td>
+        </tr>
+       
+            </tr>
+        </tr>
+        <tr>
+            <td style="height: 100px; width: 200px;"></td>
+            <td style="height: 100px; width: 200px;"></td>
+        </tr>
+    </tbody>
+</table>
 
-            </div> <!-- content -->
-
-            @include('layouts.partials.agent.footer')
-
-        </div>
-
-        <!-- ============================================================== -->
-        <!-- End Page content -->
-        <!-- ============================================================== -->
 
     </div>
+    
     <!-- END wrapper -->
 
     @include('layouts.partials.agent.footer-scripts')
